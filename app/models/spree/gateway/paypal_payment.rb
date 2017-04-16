@@ -33,6 +33,7 @@ module Spree
             currency: order.currency,
             details:{
               shipping: order.shipments.map(&:discounted_cost).sum,
+              discount: order.promo_total,
               subtotal: order.item_total.to_s,
               tax: order.additional_tax_total.to_s
             }

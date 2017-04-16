@@ -7,8 +7,8 @@ require "spree_paypal_rest/version"
 Gem::Specification.new do |s|
   s.name        = "spree_paypal_rest"
   s.version     = SpreePaypalRest::VERSION
-  s.authors     = ["hugomarquez"]
-  s.email       = ["hugomarquez.dev@gmail.com"]
+  s.authors     = ["dboi"]
+  s.email       = ["william@vinova.sg"]
   s.homepage    = "http://www.spreecommerce.com"
   s.summary     = "Adds PayPal Express as a Payment Method to Spree Commerce"
   s.description = "Adds PayPal Express as a Payment Method to Spree Commerce"
@@ -23,10 +23,10 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "spree_core", '~> 3.2.1'
   s.add_development_dependency "spree_auth_devise", "~> 3.2.0.beta"
 
-  s.add_development_dependency "sqlite3"
+  # s.add_development_dependency "sqlite3"
   s.add_development_dependency "jquery-rails", ">= 3", "< 5"
   s.add_development_dependency "sass-rails", ">= 4.0", "< 6"
   s.add_development_dependency "coffee-rails", "4.2"
-  s.add_development_dependency "byebug"
-  s.add_development_dependency "thin", "1.6.4"
+  # s.add_development_dependency "byebug"
+  # s.add_development_dependency "thin", "1.6.4"
 end

@@ -25,15 +25,16 @@ module Spree
           cancel_url: Store.current.url + Core::Engine.routes.url_helpers.paypal_express_cancel_order_checkout_path(order.id),
         },
         transactions:[{
-          item_list:{
-            items: order_line_items(order)
-          },
+          #item_list:{
+          #  items: order_line_items(order)
+          #},
           amount: {
             total: order.total.to_s,
             currency: order.currency,
             details:{
               shipping: order.shipments.map(&:discounted_cost).sum,
-              subtotal: order.item_total.to_s,
+              subtotal: (order.item_total + order.promo_total).to_s,
+              #subtotal: order.item_total.to_s,
               tax: order.additional_tax_total.to_s
             }
           },

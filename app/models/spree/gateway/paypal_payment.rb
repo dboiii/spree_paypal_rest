@@ -68,6 +68,14 @@ module Spree
           quantity: 1
         }
       end
+      if order.promo_total != 0
+        items << {
+          name: "Discount",
+          price: order.promo_total.to_s,
+          currency: order.currency,
+          quantity: 1
+        }
+      end
       items
     end
 

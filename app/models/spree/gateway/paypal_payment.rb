@@ -25,9 +25,9 @@ module Spree
           cancel_url: Store.current.url + Core::Engine.routes.url_helpers.paypal_express_cancel_order_checkout_path(order.id),
         },
         transactions:[{
-          #item_list:{
-          #  items: order_line_items(order)
-          #},
+          item_list:{
+            items: order_line_items(order)
+          },
           amount: {
             total: order.total.to_s,
             currency: order.currency,
